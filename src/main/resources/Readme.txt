@@ -36,3 +36,5 @@ Requirements for an Entity class :
     >> see MixedAccess.java
 >> Field access is the way to go most of the time
 ----------------------------------------------------------------------
+>> SimpleEntity.java
+>> Employee.java + Department.java + ParkingSpace.java + Project.java
