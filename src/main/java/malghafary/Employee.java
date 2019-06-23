@@ -20,16 +20,16 @@ public class Employee {
     private String firstName;
     private String lastName;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     private ParkingSpace parkingSpace;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @Setter
     private Department department;
 
 
     // This is an element collection, since we are using List, we can set the @OrderBy
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.LAZY)
     @OrderBy()
     private List<String> names;
 
